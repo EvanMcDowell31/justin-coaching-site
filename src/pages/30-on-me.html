@@ -1,0 +1,53 @@
+<!--{"path": "30-on-me", "title": "30 on Me: Apply for Your Free Self Tape Session | Justin David Coaching", "description": "Your first 30 minute self tape session is free for actors ready to train. Answer four quick questions to claim it."}-->
+<div class="glow-page">
+  <section class="section" aria-labelledby="thirty-h">
+    <div class="wrap narrow">
+      <p class="eyebrow">30 on Me</p>
+      <h1 id="thirty-h" class="display h-xl" style="margin-bottom:22px">Your first 30.<br><span class="o">On me.</span></h1>
+      <p class="lead muted" style="margin-bottom:32px">A free 30 minute self tape session for actors ready to train. Tell me a little about you first so I can make the time count. It takes about a minute.</p>
+
+      <form class="card form-card form" data-form="thirty" data-done="thirty-done" aria-labelledby="thirty-form-h">
+        <div>
+          <h2 id="thirty-form-h" class="display h-sm">Start with you</h2>
+          <p class="small mb-0">Your answers come to me and only me.</p>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="f-name">Your name</label><input class="input" id="f-name" name="Name" type="text" placeholder="Your full name" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">Phone number</label><input class="input" id="f-phone" name="Phone" type="tel" placeholder="(404) 555-0123" autocomplete="tel" required></div>
+        </div>
+        <div class="field"><label for="f-email">Email</label><input class="input" id="f-email" name="Email" type="email" placeholder="you@email.com" autocomplete="email" required></div>
+        <div class="field"><label for="f-journey">Where are you in your acting journey?</label>
+          <select id="f-journey" name="Acting journey" required><option value="">Choose one</option><option>Just curious about acting</option><option>Starting out or taking classes</option><option>Actively auditioning or working</option></select></div>
+        <div class="field"><label for="f-help">What would you like help with?</label>
+          <select id="f-help" name="Help with" required><option value="">Choose one</option><option>Building an acting career</option><option>Improving my acting or audition skills</option><option>Exploring acting as a hobby</option></select></div>
+        <div class="field"><label for="f-start">When would you like to begin training?</label>
+          <select id="f-start" name="Start training" required><option value="">Choose one</option><option>Immediately</option><option>Within 30 days</option><option>Just researching for now</option></select></div>
+        <div class="field"><label for="f-paid">If the session is helpful, would you consider paid coaching?</label>
+          <select id="f-paid" name="Paid coaching" required><option value="">Choose one</option><option>Yes, I’m actively looking</option><option>Possibly, depending on the fit</option><option>No, I’m only interested in the free session</option></select></div>
+        <input type="hidden" name="Result" value="">
+        <div class="trap" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <a class="link" href="{{root}}30-on-me-terms">Read the 30 on Me terms</a>
+        </div>
+        <p class="draft-note mb-0"><b>Draft:</b> this form sends nothing. It scores the answers the way the live form does and shows the next step.</p>
+      </form>
+
+      <div class="result" id="thirty-done" tabindex="-1" role="status" hidden>
+        <div data-when="in">
+          <p class="eyebrow">● You’re in<span data-first></span></p>
+          <h2 class="display">Pick a time for <span class="o">your free 30.</span></h2>
+          <p style="margin-top:16px">Bring the scene you’re working on. We’ll break it down, find your choice, and put it on tape. Your details are already filled in.</p>
+        </div>
+        <div data-when="curious" hidden>
+          <p class="eyebrow">● Thanks<span data-first></span></p>
+          <h2 class="display">Curious counts. <span class="o">Pick a time.</span></h2>
+          <p style="margin-top:16px">You do not have to be an actor yet, and you do not have to have it figured out. Bring whatever made you wonder. We will talk about it honestly, try a scene if you want, and see what makes sense for you. Your details are already filled in.</p>
+        </div>
+        <a class="btn btn-primary" data-pick href="https://justindavidcoaching.as.me/?appointmentType=100672927" style="min-height:56px">Pick my time</a>
+        <p class="small">Zoom · 30 minutes · free, no card needed · <a class="link" href="{{root}}30-on-me-terms">Terms</a></p>
+        <p class="draft-note mb-0"><b>Draft:</b> nothing was sent. On the live site Justin gets your answers tagged <span data-score></span>.</p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -11,7 +11,7 @@ compare with his live site; nothing here replaces it until he says so.
 
 | Part | On Framer | Here |
 | --- | --- | --- |
-| Pages | 9 Framer pages | 9 HTML pages in `docs/`, at the same paths (`/self-tape`, `/coaching`, …) |
+| Pages | 9 pages in its sitemap, plus the checkout page `/coaching/enroll` | 10 HTML pages in `docs/`, at the same paths (`/self-tape`, `/coaching`, `/coaching/enroll`, …), and a 404 page |
 | Look and motion | Framer components | `docs/assets/site.css` and `site.js`, no framework; every loop can be paused |
 | Booking | Acuity | Unchanged: the same Acuity links and pop-up |
 | Ebook | Stripe payment link, delivery by Justin's own email automation | Unchanged |
@@ -19,10 +19,35 @@ compare with his live site; nothing here replaces it until he says so.
 | Photos and videos | Framer's file host | Draft: loaded from Framer's file host, never copied into this public repo. Live: copied to the new host, videos re-encoded under 25 MB |
 | Analytics | Framer analytics, plus GA, Meta Pixel and Clarity slots | Draft: none. Live: Cloudflare Web Analytics (free, no cookies) if he wants it |
 
+## Where the draft differs from the live site
+
+His words were matched line by line against the live pages as published on 23 Nov 2026 at 21:04 UTC.
+On purpose, the draft differs in these places:
+
+- The home page's `h1` is the headline alone. Live, it also wraps the hero's decorative frame text
+  (REC, timecode, "Scene 01 / Take 15").
+- "About Me" goes to the About section of the home page. Live, it goes to the top of the home page.
+- Every ticker has a pause button, and the REC button pauses all of the page's motion. The book cover
+  doesn't sway. (WCAG 2.2.2: moving content needs a way to stop it.)
+- The services timeline is a plain list with a photo beside each entry. Live, a sticky photo swaps as
+  you scroll and the other entries dim.
+- The checkout page has its own title. Live, it carries the home page's.
+- The legal pages' "•" lines are real lists.
+- No analytics. The live site has slots for Google Analytics, Meta Pixel and Clarity.
+
+Found on the live site, for Justin:
+
+- The 30 on Me terms differ by screen size. Desktop shows the 19 Nov version; phones show an older 16 Nov
+  version (it mentions the Actors community on Skool and lacks "I may edit it…"). The draft uses the
+  desktop version.
+- The 404 page's title is "Page Not Found | Framer".
+
 ## Build and check
 
 ```
 python3 tools/build.py          # src/ -> docs/
+python3 tools/links.py          # every internal link and #anchor resolves
+node tools/formtest.mjs         # the forms, 30 on Me scoring included
 node tools/shoot.mjs [page]     # review/ screenshots (git-ignored) and docs/og.png
 node tools/overflow.mjs [page]  # anything wider than a phone
 node tools/a11y.mjs             # axe-core WCAG 2.2 AA, keyboard and motion checks

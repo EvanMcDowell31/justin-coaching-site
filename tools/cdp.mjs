@@ -10,8 +10,9 @@ import { fileURLToPath } from "node:url";
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 export const pageUrl = "file://" + join(root, "docs/index.html");
 // Every page of the site, for the checks and the screenshots: its file under docs/ and the path it is
-// served at (GitHub Pages and Cloudflare Pages both serve docs/NAME.html at /NAME).
-export const pages = ["", "self-tape", "coaching", "services", "contact", "30-on-me", "30-on-me-terms", "privacy", "legal-pages/terms-of-service"]
+// served at (GitHub Pages and Cloudflare Pages both serve docs/NAME.html at /NAME). 404.html is left
+// out: its links start at the site root, so it only works once served; check it on the live site.
+export const pages = ["", "self-tape", "coaching", "services", "contact", "30-on-me", "30-on-me-terms", "privacy", "legal-pages/terms-of-service", "coaching/enroll"]
   .map((path) => {
     const file = "docs/" + (path || "index") + ".html";
     return { name: path ? path.split("/").pop() : "home", file, path, url: "file://" + join(root, file) };

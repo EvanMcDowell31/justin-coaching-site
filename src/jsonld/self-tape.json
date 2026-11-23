@@ -1,0 +1,136 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://www.justindavidcoaching.com/#justin",
+   "name": "Justin David",
+   "jobTitle": "Actor and Self Tape Coach",
+   "url": "https://www.justindavidcoaching.com/",
+   "image": "https://framerusercontent.com/images/43hWCr6pi7TqVnoNfFSjba94.jpg",
+   "sameAs": [
+    "https://www.imdb.com/name/nm8303358/"
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.justindavidcoaching.com/#self-tape-coaching",
+   "name": "Self Tape Coaching and Audition Reader Sessions",
+   "serviceType": "Self tape coaching",
+   "provider": {
+    "@id": "https://www.justindavidcoaching.com/#justin"
+   },
+   "url": "https://www.justindavidcoaching.com/",
+   "availableChannel": {
+    "@type": "ServiceChannel",
+    "name": "Live Zoom session",
+    "serviceUrl": "https://justindavidcoaching.as.me/"
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "The Reader, 30 minutes",
+     "price": "75",
+     "priceCurrency": "USD",
+     "url": "https://justindavidcoaching.as.me/"
+    },
+    {
+     "@type": "Offer",
+     "name": "Coach + Reader, 60 minutes",
+     "price": "150",
+     "priceCurrency": "USD",
+     "url": "https://justindavidcoaching.as.me/"
+    },
+    {
+     "@type": "Offer",
+     "name": "Coach + Reader, 2 hours",
+     "price": "200",
+     "priceCurrency": "USD",
+     "url": "https://justindavidcoaching.as.me/"
+    }
+   ],
+   "audience": {
+    "@type": "Audience",
+    "audienceType": "SAG-AFTRA and non-union actors"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.justindavidcoaching.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does a self tape session cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sessions are $75 for 30 minutes, $150 for 60 minutes, or $200 for 2 hours. There's no package or ongoing commitment. You book the time you need for the audition in front of you."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are sessions in person or online?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "All sessions are done live over Zoom, so you can book from anywhere. You film on your own setup while I read with you off camera."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you give line readings?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. I won't tell you how to say a line. We break down the scene so you find your own choices, rehearse it a few different ways off tape, and then film it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's the difference between a reader and a self tape coach?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A reader gives you a real person to react to off camera. Coaching adds direction and feedback on your choices before you tape. The 30 minute session is mostly reading with some direction, and the longer sessions leave more time to coach."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which session should I book for my first time?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "I usually recommend the 60 minute session for first time clients. It gives us time to work the scene and still get it on tape without rushing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need a professional self tape setup?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. You need to be well lit from the front, have a background that isn't distracting, and record clean audio. If you want help with lighting, camera, or background, let me know when you book."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do I send before my session?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "When you book, send your sides and any notes from casting so I can read them before we start."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who is Justin David?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "I'm a working South Indian actor in Hollywood. I've been acting since 2016, with principal roles on TV and supporting roles in feature films. I've booked about 90% of my work off self tapes, and I still audition today. I coach both SAG-AFTRA and non-union actors on their self tapes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you guarantee I'll book the role?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No one can promise that. What I can do is help you prepare, make stronger choices, and send in a tape you feel confident about."
+     }
+    }
+   ]
+  }
+ ]
+}

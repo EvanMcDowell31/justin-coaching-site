@@ -5,6 +5,8 @@ Each page starts with one line of JSON in an HTML comment:
   <!--{"path": "self-tape", "title": "...", "description": "...", "jsonld": "home.json",
        "css": ["self-tape.css"], "js": ["self-tape.js"]}-->
 "css" and "js" (optional) name files in docs/assets/pages/ that only that page loads.
+"absolute": true makes the page's links start at site.json's "site_root" (for 404.html, which is
+served at any address).
 "path" is where the page is served ("" for the home page). GitHub Pages and Cloudflare Pages
 both serve docs/self-tape.html at /self-tape, so every address stays what it is on Framer.
 
@@ -20,7 +22,7 @@ SRC = ROOT / "src"
 OUT = ROOT / "docs"
 SITE = json.loads((SRC / "site.json").read_text())
 
-DRAFT = """<div class="draft" role="note"><div class="wrap"><b>Draft</b><span>Justin David Coaching, rebuilt without Framer for Justin to compare. Not the official site, which is at <a href="https://www.justindavidcoaching.com/">justindavidcoaching.com</a>. Booking and checkout buttons go to his real Acuity and Stripe pages. Forms don’t send anything yet.</span></div></div>
+DRAFT = """<aside class="draft" aria-label="Draft notice"><div class="wrap"><b>Draft</b><span>Justin David Coaching, rebuilt without Framer for Justin to compare. Not the official site, which is at <a href="https://www.justindavidcoaching.com/">justindavidcoaching.com</a>. Booking and checkout buttons go to his real Acuity and Stripe pages. Forms don’t send anything yet.</span></div></aside>
 """
 IRIE = '<p class="irie">Made with <a href="https://irie-people.github.io/irie/">Irie</a></p>'
 
@@ -39,6 +41,8 @@ def build():
         path = meta["path"]
         depth = path.count("/")
         root = "../" * depth if depth else "./"
+        if meta.get("absolute"):  # a page served at any address (404): links from the site root
+            root = SITE["site_root"]
         canonical = SITE["base"] + path
         jsonld = ""
         if meta.get("jsonld"):
@@ -71,7 +75,8 @@ def build():
         out = OUT / ("index.html" if path == "" else path + ".html")
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page)
-        sitemap.append(canonical)
+        if not meta.get("absolute") and meta.get("sitemap", True):
+            sitemap.append(canonical)
         print("wrote", out.relative_to(ROOT))
     (OUT / ".nojekyll").write_text("")
     urls = "".join(f"  <url><loc>{html.escape(u)}</loc></url>\n" for u in sitemap)
