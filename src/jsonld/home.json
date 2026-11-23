@@ -1,0 +1,124 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://www.justindavidcoaching.com/#justin",
+   "name": "Justin David",
+   "jobTitle": "Actor and Acting Coach",
+   "url": "https://www.justindavidcoaching.com/",
+   "image": "https://framerusercontent.com/images/43hWCr6pi7TqVnoNfFSjba94.jpg",
+   "sameAs": [
+    "https://www.imdb.com/name/nm8303358/"
+   ],
+   "homeLocation": {
+    "@type": "Place",
+    "name": "Atlanta, Georgia"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.justindavidcoaching.com/#self-tape-coaching",
+   "name": "Self Tape Coaching and Audition Reader Sessions",
+   "serviceType": "Self tape coaching",
+   "provider": {
+    "@id": "https://www.justindavidcoaching.com/#justin"
+   },
+   "url": "https://www.justindavidcoaching.com/",
+   "availableChannel": {
+    "@type": "ServiceChannel",
+    "name": "Live Zoom session",
+    "serviceUrl": "https://justindavidcoaching.as.me/"
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "The Reader, 30 minutes",
+     "price": "75",
+     "priceCurrency": "USD",
+     "url": "https://justindavidcoaching.as.me/"
+    },
+    {
+     "@type": "Offer",
+     "name": "Coach + Reader, 60 minutes",
+     "price": "150",
+     "priceCurrency": "USD",
+     "url": "https://justindavidcoaching.as.me/"
+    },
+    {
+     "@type": "Offer",
+     "name": "Coach + Reader, 2 hours",
+     "price": "200",
+     "priceCurrency": "USD",
+     "url": "https://justindavidcoaching.as.me/"
+    }
+   ],
+   "audience": {
+    "@type": "Audience",
+    "audienceType": "SAG-AFTRA and non-union actors"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.justindavidcoaching.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What happens in the free 30 minutes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We work on your material. Book First 30 on Me. It’s already free, so there’s no code to enter and no card needed. One first session per actor, subject to availability. All 30 minutes go to the work. A review is optional, and marketing permission is separate."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where do sessions happen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Live on Zoom wherever you tape. In person sessions can be arranged in the Atlanta area. Travel is an added fee agreed in advance. For remote sessions, have your camera, sound, and recording setup ready."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should I send before we meet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your sides, audition instructions, deadline, and anything casting shared. Tell me which scenes you want to work and what’s giving you trouble. Send material through the booking intake process."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will you make me start over with a new technique?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Bring your training with you. We look at what’s helping and where you’re getting stuck, then apply the work to your scene in plain language."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you guarantee I’ll book?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No coach can promise casting’s decision. We can work on the preparation, responsiveness, and choices you take into your audition."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What if I need to cancel or reschedule?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Review the cancellation and rescheduling terms shown in Acuity before confirming. Package expiry, refunds, and unused session terms should be agreed before you enroll. If you’re unsure, ask me before you pay."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can a minor book a session?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A parent or guardian should arrange the booking and be present for the session. Contact me first so we can discuss the material and setup."
+     }
+    }
+   ]
+  }
+ ]
+}
